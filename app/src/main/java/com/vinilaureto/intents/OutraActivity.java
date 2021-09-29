@@ -32,5 +32,6 @@ public class OutraActivity extends AppCompatActivity {
             setResult(RESULT_OK, retornoIntent);
             finish();
         });
+
     }
 }

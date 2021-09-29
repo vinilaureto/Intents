@@ -143,6 +143,7 @@ public class MainActivity extends AppCompatActivity {
                 escolherActivityIntent.putExtra(EXTRA_TITLE, "Escolha um aplicativo");
                 escolherAplicativoActivityResultLauncher.launch(escolherActivityIntent);
             }
+
         }
 
         return false;
