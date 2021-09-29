@@ -7,7 +7,7 @@ import android.os.Bundle;
 
 import com.vinilaureto.intents.databinding.ActivityOutraBinding;
 
-import static com.vinilaureto.intents.MainActivity.parametro;
+import static com.vinilaureto.intents.MainActivity.PARAMETRO;
 
 public class OutraActivity extends AppCompatActivity {
     private ActivityOutraBinding activityOutraBinding;
@@ -22,13 +22,13 @@ public class OutraActivity extends AppCompatActivity {
         getSupportActionBar().setTitle("Outra Activity");
         getSupportActionBar().setSubtitle("Recebe e retorna um valor");
 
-        activityOutraBinding.recebidoTv.setText(getIntent().getStringExtra(parametro));
+        activityOutraBinding.recebidoTv.setText(getIntent().getStringExtra(PARAMETRO));
 
         activityOutraBinding.retornarBt.setOnClickListener(view -> {
             String result = activityOutraBinding.retornoEt.getText().toString();
 
             Intent retornoIntent = new Intent();
-            retornoIntent.putExtra(parametro, result);
+            retornoIntent.putExtra(PARAMETRO, result);
             setResult(RESULT_OK, retornoIntent);
             finish();
         });
